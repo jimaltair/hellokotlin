@@ -1,6 +1,4 @@
-import kotlincode.Person
-import kotlincode.Rectangle
-import kotlincode.createRandomRectangle
+import kotlincode.*
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")
@@ -21,7 +19,19 @@ fun main(args: Array<String>) {
 //    val rectangle = Rectangle(41, 43)
 //    println(rectangle.isSquare)
 
-    val rectangle = createRandomRectangle()
-    println("height = ${rectangle.height} width = ${rectangle.width}")
+//    val rectangle = createRandomRectangle()
+//    println("height = ${rectangle.height} width = ${rectangle.width}")
+
+//    println(Color.BLUE.rgb())
+//    println(getMnemonic(Color.BLUE))
+//    println(getWarmth(Color.GREEN))
+//    println(mix(Color.BLUE, Color.YELLOW))
+//    println(mixOptimized(Color.YELLOW, Color.BLUE))
+
+    // (1 + 2) + 4
+//    println(evalJavaStyle(Sum(Sum(Num(1), Num(2)), Num(4))))
+//    println(evalKotlinStyleIf(Sum(Sum(Num(1), Num(2)), Num(4))))
+//    println(evalKotlinStyleWhen(Sum(Sum(Num(1), Num(2)), Num(4))))
+//    println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
 
 }
