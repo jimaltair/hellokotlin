@@ -3,7 +3,7 @@ package javacode;
 import kotlincode.Person;
 import kotlincode.Rectangle;
 
-//TODO: разобраться почему не запускается
+// TODO: разобраться почему не запускается
 public class Main {
     // этот код не зависит от того, на каком языке определен класс Person - Java или Kotlin
     public static void main(String[] args) {

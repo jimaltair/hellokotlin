@@ -33,5 +33,7 @@ fun main(args: Array<String>) {
 //    println(evalKotlinStyleIf(Sum(Sum(Num(1), Num(2)), Num(4))))
 //    println(evalKotlinStyleWhen(Sum(Sum(Num(1), Num(2)), Num(4))))
 //    println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
-
+//    println(playFizzBuzz())
+//    println(playImprovedFizzBuzz())
+//    println(playFizzBuzzHalfOpenedRange())
 }
