@@ -2,6 +2,10 @@ package javacode;
 
 import kotlincode.Person;
 import kotlincode.Rectangle;
+import kotlincode.StringFunctions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // TODO: разобраться почему не запускается
 public class Main {
@@ -12,5 +16,11 @@ public class Main {
 
         Rectangle rectangle = new Rectangle(41, 43);
         System.out.println(rectangle.isSquare());
+
+        List<Integer> numbers = List.of(1, 10, 100);
+        /**
+         * такой вызов функции возможен благодаря аннотации @JvmOverloads над соответствующей функцией
+         */
+        StringFunctions.joinToString(numbers);
     }
 }

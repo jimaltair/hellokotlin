@@ -1,18 +1,16 @@
 import kotlincode.*
-import java.io.BufferedReader
-import java.io.StringReader
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")
 
-//    println(kotlincode.Functions().max1(10, 20))
-//    println(kotlincode.Functions().max2(10, 20))
+//    println(Functions().max1(10, 20))
+//    println(Functions().max2(10, 20))
 
-//    println(kotlincode.Variables().compareAndPrintMessage(10, 20))
-//    println(kotlincode.Variables().compareAndPrintMessage(20, 10))
+//    println(Variables().compareAndPrintMessage(10, 20))
+//    println(Variables().compareAndPrintMessage(20, 10))
 
-//    println(kotlincode.StringFormatting().formatString(arrayOf("Bob")))
-//    println(kotlincode.StringFormatting().formatString(arrayOf()))
+//    println(StringFormatting().formatString(arrayOf("Bob")))
+//    println(StringFormatting().formatString(arrayOf()))
 
 //    val person = Person("Bob", true)
 //    println(person.name) // Конструктор вызывается без ключевого слова «new»
@@ -58,4 +56,17 @@ fun main(args: Array<String>) {
 //    readNumber2(BufferedReader(StringReader("156")))
 //    readNumber2(BufferedReader(StringReader("not a number")))
 //    readNumber3(BufferedReader(StringReader("not a number")))
+
+//    println(KotlinCollections().set.javaClass)
+//    println(KotlinCollections().list.javaClass)
+//    println(KotlinCollections().map.javaClass)
+//    println(KotlinCollections().lastIndexInList())
+//    println(KotlinCollections().maxElementInSet())
+//    println(KotlinCollections().list)
+
+//    println(joinToString(listOf(1, 10, 1000), separator = "; ", prefix = "(", postfix = ")"))
+//    println(joinToString(listOf(1, 10, 1000)))
+//    println(joinToString(listOf(1, 10, 1000), " | "))
+//    println(joinToString(listOf(1, 10, 1000), prefix = "{", postfix = "}"))
+//    performOperation(28)
 }
