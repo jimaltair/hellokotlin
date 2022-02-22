@@ -40,7 +40,7 @@ fun <T> joinToString(
  */
 var counter = 0
 fun performOperation(times: Int) {
-    for (i in 0 until times){
+    for (i in 0 until times) {
         counter++
     }
     println("Operation was performed $counter times")

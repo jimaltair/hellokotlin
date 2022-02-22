@@ -1,7 +1,7 @@
-import kotlincode.chapter2.*
 import kotlincode.chapter3.*
-import java.io.BufferedReader
-import java.io.StringReader
+/**
+ * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
+ */
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")
@@ -72,4 +72,13 @@ fun main(args: Array<String>) {
 //    println(joinToString(listOf(1, 10, 1000), " | "))
 //    println(joinToString(listOf(1, 10, 1000), prefix = "{", postfix = "}"))
 //    performOperation(28)
+//
+//    println("some string".lastChar())
+//    println("some string".last())
+
+//    val list = listOf(1, 2, 3)
+//    println(list.joinToString("; ", "(", ")"))
+//    println(list.joinToString("   "))
+//    println(listOf("one", "two", "ten").join())
+//    println(listOf(1, 2, 10).join())    // не компилируется
 }

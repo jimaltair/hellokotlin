@@ -1,6 +1,7 @@
 package javacode;
 
 import kotlincode.chapter2.*;
+import kotlincode.chapter3.MethodsAdditionToOutsideClassesKt;
 import kotlincode.chapter3.StringFunctions;
 
 
@@ -8,8 +9,10 @@ import java.util.List;
 
 // TODO: разобраться почему не запускается
 public class Main {
-    // этот код не зависит от того, на каком языке определен класс Person - Java или Kotlin
     public static void main(String[] args) {
+        /**
+         * Этот код не зависит от того, на каком языке определен класс Person - Java или Kotlin
+         */
         Person person = new Person("Bob", true);
         System.out.println(person);
 
@@ -18,8 +21,13 @@ public class Main {
 
         List<Integer> numbers = List.of(1, 10, 100);
         /**
-         * такой вызов функции возможен благодаря аннотации @JvmOverloads над соответствующей функцией
+         * Такой вызов функции возможен благодаря аннотации @JvmOverloads над соответствующей функцией
          */
         StringFunctions.joinToString(numbers);
+
+        /**
+         * Вызываем функцию-расширение из Kotlin-кода как обычный статический метод по названию файла
+         */
+        MethodsAdditionToOutsideClassesKt.lastChar("some string");
     }
 }
