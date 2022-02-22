@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter2
 
 class StringFormatting {
     // Выведет «Hello, Kotlin!» или «Hello, Bob!», если передать аргумент со строкой «Bob»

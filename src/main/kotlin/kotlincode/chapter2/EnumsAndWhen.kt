@@ -1,6 +1,6 @@
-package kotlincode
+package kotlincode.chapter2
 
-import kotlincode.Color.*
+import kotlincode.chapter2.Color.*
 
 // простой класс перечислений
 enum class Colors1 {

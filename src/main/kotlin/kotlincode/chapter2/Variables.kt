@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter2
 
 class Variables {
     // String

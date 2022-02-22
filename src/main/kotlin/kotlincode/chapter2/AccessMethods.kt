@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter2
 
 import kotlin.random.Random
 

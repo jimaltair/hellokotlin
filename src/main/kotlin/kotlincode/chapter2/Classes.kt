@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter2
 
 class Person1(val name: String)
 

@@ -5,7 +5,7 @@
  */
 @file: JvmName("StringFunctions")
 
-package kotlincode
+package kotlincode.chapter3
 
 /**
  * так можно объявить константу (слово const нужно для корректного доступа из Java-кода

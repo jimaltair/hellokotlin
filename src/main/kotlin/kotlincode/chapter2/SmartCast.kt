@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter2
 
 interface Expr  // маркерный интерфейс, играет роль общего типа для различных видов выражений
 class Num(val value: Int) : Expr     // простой класс объектов-значений с одним св-вом value, реализ. интерфейс Expr

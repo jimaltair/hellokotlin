@@ -1,10 +1,9 @@
 package javacode;
 
-import kotlincode.Person;
-import kotlincode.Rectangle;
-import kotlincode.StringFunctions;
+import kotlincode.chapter2.*;
+import kotlincode.chapter3.StringFunctions;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 // TODO: разобраться почему не запускается

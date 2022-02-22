@@ -1,4 +1,7 @@
-import kotlincode.*
+import kotlincode.chapter2.*
+import kotlincode.chapter3.*
+import java.io.BufferedReader
+import java.io.StringReader
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")

@@ -1,4 +1,4 @@
-package kotlincode
+package kotlincode.chapter3
 
 class KotlinCollections {
     val set = hashSetOf(1, 7, 53)
