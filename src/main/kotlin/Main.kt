@@ -1,4 +1,6 @@
 import kotlincode.*
+import java.io.BufferedReader
+import java.io.StringReader
 
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")
@@ -36,4 +38,24 @@ fun main(args: Array<String>) {
 //    println(playFizzBuzz())
 //    println(playImprovedFizzBuzz())
 //    println(playFizzBuzzHalfOpenedRange())
+//    mapIteration()
+//    listIteration()
+
+//    println(isLetter('q'))
+//    println(isNotDigit('8'))
+
+//    println(recognize('A'))
+//    println(recognize('0'))
+//    println(recognize('%'))
+//    checkString("Kotlin")
+//    checkStringInSet("Kotlin")
+
+//    exceptionExample(120)
+//    println(validateAndReturnPercentage(89))
+
+//    println(readNumber1(BufferedReader(StringReader("156"))))
+//    println(readNumber1(BufferedReader(StringReader("not a number"))))
+//    readNumber2(BufferedReader(StringReader("156")))
+//    readNumber2(BufferedReader(StringReader("not a number")))
+//    readNumber3(BufferedReader(StringReader("not a number")))
 }
