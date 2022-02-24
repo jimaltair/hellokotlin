@@ -1,4 +1,10 @@
+import kotlincode.chapter2.Functions
+import kotlincode.chapter2.readNumber1
 import kotlincode.chapter3.*
+import kotlincode.chapter4.Button
+import java.io.BufferedReader
+import java.io.StringReader
+
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
  */
@@ -6,6 +12,9 @@ import kotlincode.chapter3.*
 fun main(args: Array<String>) {
 //    println("Hello Kotlin!")
 
+    /**
+     * Глава 2
+     */
 //    println(Functions().max1(10, 20))
 //    println(Functions().max2(10, 20))
 
@@ -60,6 +69,9 @@ fun main(args: Array<String>) {
 //    readNumber2(BufferedReader(StringReader("not a number")))
 //    readNumber3(BufferedReader(StringReader("not a number")))
 
+    /**
+     * Глава 3
+     */
 //    println(KotlinCollections().set.javaClass)
 //    println(KotlinCollections().list.javaClass)
 //    println(KotlinCollections().map.javaClass)
@@ -115,5 +127,11 @@ fun main(args: Array<String>) {
 //    saveUserBeforeRefactoring(User(1, "", ""))
 //    saveUserAfterRefactoring(User(1, "", ""))
 //    saveUser(User(1, "", ""))
+    /**
+     * Глава 4
+     */
+    Button().showOff()
+    Button().setFocus(true)
+    Button().click()
 
 }
