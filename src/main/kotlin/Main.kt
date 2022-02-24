@@ -91,5 +91,22 @@ fun main(args: Array<String>) {
 //    sb.lastChar = '!'
 //    println(sb)
 
-    arrayUnpacking(arrayOf("Java", "Kotlin", "Scala"))
+//    arrayUnpacking(arrayOf("Java", "Kotlin", "Scala"))
+//    println(map)
+//    println(1.plus(5))
+//    println(1 plus 5)
+//    iterateAndPrint(listOf(1, 2, 3, 4, 5))
+
+//    splitStringWithRegex("12.345-6.А")
+//    splitStringWithDelimeters("12.345-6.А")
+    /**
+     * Строки в тройных кавычках могут содержать переносы строк, но в них нельзя использовать специальных символов,
+     * таких как \n. С другой стороны, отпадает необходимость экранировать символ \
+     */
+    val path = """C:\Maps.me\hellokotlin\src\main\kotlin\Main.kt"""
+    parsePath(path)
+    parsePathWithRegex(path)
+    printKotlinLogo()
+    printPrice()
+
 }
