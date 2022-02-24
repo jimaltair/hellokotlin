@@ -103,10 +103,17 @@ fun main(args: Array<String>) {
      * Строки в тройных кавычках могут содержать переносы строк, но в них нельзя использовать специальных символов,
      * таких как \n. С другой стороны, отпадает необходимость экранировать символ \
      */
-    val path = """C:\Maps.me\hellokotlin\src\main\kotlin\Main.kt"""
-    parsePath(path)
-    parsePathWithRegex(path)
-    printKotlinLogo()
-    printPrice()
+//    val path = """C:\Maps.me\hellokotlin\src\main\kotlin\Main.kt"""
+//    parsePath(path)
+//    parsePathWithRegex(path)
+//    printKotlinLogo()
+//    printPrice()
+    /**
+     * получаем ошибку
+     */
+//    saveUserJavaStyle(User(1, "", ""))
+//    saveUserBeforeRefactoring(User(1, "", ""))
+//    saveUserAfterRefactoring(User(1, "", ""))
+//    saveUser(User(1, "", ""))
 
 }
