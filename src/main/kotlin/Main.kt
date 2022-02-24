@@ -2,6 +2,7 @@ import kotlincode.chapter2.Functions
 import kotlincode.chapter2.readNumber1
 import kotlincode.chapter3.*
 import kotlincode.chapter4.Button
+import kotlincode.chapter4.RealAnimatedClass
 import java.io.BufferedReader
 import java.io.StringReader
 
@@ -130,8 +131,13 @@ fun main(args: Array<String>) {
     /**
      * Глава 4
      */
-    Button().showOff()
-    Button().setFocus(true)
-    Button().click()
+//    Button().showOff()
+//    Button().setFocus(true)
+//    Button().click()
+
+//    val realAnimatedClass = RealAnimatedClass()
+//    realAnimatedClass.animate()
+//    realAnimatedClass.animateTwice()
+//    realAnimatedClass.stopAnimating()
 
 }
