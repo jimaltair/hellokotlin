@@ -2,6 +2,7 @@ package javacode;
 
 import kotlincode.chapter2.*;
 import kotlincode.chapter3.MethodsAdditionToOutsideClassesKt;
+import kotlincode.chapter3.PropertiesAdditionToOutsideClassesKt;
 import kotlincode.chapter3.StringFunctions;
 
 
@@ -29,5 +30,9 @@ public class Main {
          * Вызываем функцию-расширение из Kotlin-кода как обычный статический метод по названию файла
          */
         MethodsAdditionToOutsideClassesKt.lastChar("some string");
+        /**
+         * чтобы обратиться к свойству-расширению из Java, нужно явно вызывать его метод чтения:
+         */
+        PropertiesAdditionToOutsideClassesKt.getLastChar("Java");
     }
 }

@@ -81,4 +81,15 @@ fun main(args: Array<String>) {
 //    println(list.joinToString("   "))
 //    println(listOf("one", "two", "ten").join())
 //    println(listOf(1, 2, 10).join())    // не компилируется
+
+//    val view: View = Button()   // вызываемый метод определяется фактическим значением переменной view
+//    view.click()
+//    view.showOff()      // вызываемая функция-расширение определяется статически
+
+//    println("Kotlin".lastChar)
+//    val sb = StringBuilder("Kotlin?")
+//    sb.lastChar = '!'
+//    println(sb)
+
+    arrayUnpacking(arrayOf("Java", "Kotlin", "Scala"))
 }
