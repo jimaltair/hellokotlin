@@ -1,5 +1,9 @@
 package kotlincode.chapter4
 
+import javax.naming.Context
+import javax.print.attribute.AttributeSet
+import javax.print.attribute.HashAttributeSet
+
 /**
  * Объявляем простой класс
  */
@@ -66,3 +70,46 @@ class RadioButton : Button2()
  * конструктор, код снаружи класса не сможет создать его экземпляра.
  */
 class Secretive private constructor() { /*...*/ }        // Конструктор этого класса приватный
+
+/**
+ * Представьте класс View, объявленный в Java, который имеет два конструктора.
+ * Этот класс не имеет основного конструктора. Вот как выглядит аналогичное объявление в Kotlin:
+ */
+open class View1 {
+    constructor(ctx: Context) {      // вторичный конструктор
+        // некоторый код
+    }
+
+    constructor(ctx: Context, attr: AttributeSet) {      // вторичный конструктор
+        // некоторый код
+    }
+}
+
+/**
+ * Чтобы расширить этот класс, объявите те же конструкторы:
+ */
+class MyButton : View1 {
+    constructor(ctx: Context) : super(ctx) {        // вызов конструктора суперкласса
+        //...
+    }
+
+    constructor(ctx: Context, attr: AttributeSet) : super(ctx, attr) {      // вызов конструктора суперкласса
+        //...
+    }
+}
+
+/**
+ * Как в Java, в Kotlin есть возможность вызвать один конструктор класса из другого с помощью ключевого слова this.
+ * Вот как это работает:
+ */
+val MY_STYLE = HashAttributeSet()
+class MyButton1 : View1 {
+
+    constructor(ctx: Context, attr: AttributeSet) : super(ctx, attr) {
+        //...
+    }
+
+    constructor(ctx: Context) : this(ctx, MY_STYLE) {       // делегирует выполнение другому конструктору того же класса
+        //...
+    }
+}
