@@ -3,6 +3,7 @@ import kotlincode.chapter2.readNumber1
 import kotlincode.chapter3.*
 import kotlincode.chapter4.Button
 import kotlincode.chapter4.RealAnimatedClass
+import kotlincode.chapter4.testUser4
 import java.io.BufferedReader
 import java.io.StringReader
 
@@ -139,5 +140,7 @@ fun main(args: Array<String>) {
 //    realAnimatedClass.animate()
 //    realAnimatedClass.animateTwice()
 //    realAnimatedClass.stopAnimating()
+
+    testUser4()
 
 }
