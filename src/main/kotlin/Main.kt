@@ -1,10 +1,4 @@
-import kotlincode.chapter2.Functions
-import kotlincode.chapter2.readNumber1
-import kotlincode.chapter3.*
 import kotlincode.chapter4.*
-import kotlincode.chapter4.Button
-import java.io.BufferedReader
-import java.io.StringReader
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -144,4 +138,21 @@ fun main(args: Array<String>) {
 
 //    println(SubscribingUser("test@kotlinlang.org").nickname)
 //    println(FacebookUser(123).nickname)
+
+//    val user = User8("Alice")
+//    user.address = "Elsenheimerstrasse 47, 80687 Muenchen"
+
+//    val lengthCounter = LengthCounter()
+//    lengthCounter.addWord("Hi!")
+//    println(lengthCounter.counter)
+
+    val client = Client("Alice", 342562)
+    println(client)
+    val client1 = Client1("Alice", 342562)
+    println(client1)
+
+    println(compareClientsByReferences(Client("Alice", 342562), Client("Alice", 342562)))
+    println(compareClientsByValue(Client("Alice", 342562), Client("Alice", 342562)))
+
+
 }
