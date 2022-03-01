@@ -8,7 +8,7 @@ class Client123(val name: String, val postalCode: Int)
 /**
  * Переопределяем equals и hashCode
  */
-class Client(val name: String, val postalCode: Int){
+class Client(val name: String, val postalCode: Int) {
     // «Any» - это аналог java Java.lang.Object: суперкласс всех классов в Kotlin. Знак
     // вопроса в «Аny?» означает, что аргумент «other» может иметь значение null
     override fun equals(other: Any?): Boolean {
@@ -50,5 +50,13 @@ fun compareClientsByReferences(client1: Client, client2: Client) =
  * выполняя сравнение указателей.
  */
 fun compareClientsByValue(client1: Client, client2: Client) =
-client1 === client2
+    client1 === client2
+
+/**
+ * Класс Client как класс данных: автоматическое переопределение функций equals, toString и hashCode.
+ * Также существует встроенный метод copy.
+ * Обратите внимание, что свойства, не объявленные в основном конструкторе, не принимают участия в проверках
+ * равенства и вычислении хэш-кода.
+ */
+data class Client2(val name: String, val postalCode: Int)
 

@@ -1,3 +1,4 @@
+import kotlincode.chapter2.Person
 import kotlincode.chapter4.*
 
 /**
@@ -146,13 +147,36 @@ fun main(args: Array<String>) {
 //    lengthCounter.addWord("Hi!")
 //    println(lengthCounter.counter)
 
-    val client = Client("Alice", 342562)
-    println(client)
-    val client1 = Client1("Alice", 342562)
-    println(client1)
+//    val client = Client("Alice", 342562)
+//    println(client)
+//    val client1 = Client1("Alice", 342562)
+//    println(client1)
+//
+//    println(compareClientsByReferences(Client("Alice", 342562), Client("Alice", 342562)))
+//    println(compareClientsByValue(Client("Alice", 342562), Client("Alice", 342562)))
 
-    println(compareClientsByReferences(Client("Alice", 342562), Client("Alice", 342562)))
-    println(compareClientsByValue(Client("Alice", 342562), Client("Alice", 342562)))
+    /**
+     * true - если в Client переопределён hashCode(), в противном случае false
+     */
+//    val someVal = hashSetOf(Client("Alice", 342562))
+//    println(someVal.contains(Client("Alice", 342562)))
+
+    /**
+     * true - т.к. класс Client2 является data-классом, в котором hashCode переопределён автоматически
+     */
+//    val alice = Client2("Alice", 342562)
+//    println(alice)
+//    val set = hashSetOf(alice)
+//    println(set.contains(alice))
+//    val aliceCopy = alice.copy(alice.name, alice.postalCode)
+//    println(alice == aliceCopy)
+
+//    val cset = CountingSet<Int>()
+//    cset.addAll(listOf(1, 1, 2))
+//    println("${cset.objectsAdded} were added, ${cset.size} objects remain")
+
+    Payroll.allEmployees.add(Person("Bob", true))
+    println(Payroll.allEmployees.size)
 
 
 }
