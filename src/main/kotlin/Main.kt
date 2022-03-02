@@ -196,5 +196,9 @@ fun main(args: Array<String>) {
 //    println(subscribingUser.nickname)
 //    println(facebookUser.nickname)
 
-    testNamedCompanionObject()
+//    testNamedCompanionObject()
+//    testCompanionExtension()
+    /**
+     * Глава 5
+     */
 }

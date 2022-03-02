@@ -89,3 +89,49 @@ fun testNamedCompanionObject() {
 /**
  * Примечание: если имя объекта-компаньона не указано, по умолчанию выбирается имя Companion.
  */
+
+/**
+ * Реализация интерфейса в объекте-компаньоне
+ */
+interface JSONFactory<T> {
+    fun fromJSON(jsonText: String): T
+}
+
+class Person4(val name: String) {
+    companion object : JSONFactory<Person4> {           // объект-компаньон, реализующий интерфейс
+        override fun fromJSON(jsonText: String): Person4 = Person4("Dmitry")
+    }
+}
+
+/**
+ * Далее, если у вас есть функция, использующая абстрактную фабрику для загрузки сущностей, передайте ей объект Person.
+ */
+fun <T> loadFromJSON(factory: JSONFactory<T>) {
+    // some code
+}
+
+/* почему-то не работает как в книге на стр.134
+fun testCompanionTransmission(){
+    loadFromJSON(Person4("Dmitry"))     // передача объекта-компаньона в функцию
+}*/
+
+/**
+ * Определение функции-расширения для объекта-компаньона
+ */
+// модуль реализации бизнес-логики
+class Person5(val firstName: String, val lastName: String) {
+    companion object {              // определение пустого объекта-компаньона
+
+    }
+}
+
+// модуль реализации взаимодействий между клиентом и сервером
+fun Person5.Companion.fromJSON(json: String): Person5 {          // объявление функции-расширения
+    return Person5("Dmitry", "Botchkin")
+}
+
+fun testCompanionExtension() {
+    val person = Person5.fromJSON("some json")
+    println("Name: ${person.firstName}, last name: ${person.lastName}")
+}
+
