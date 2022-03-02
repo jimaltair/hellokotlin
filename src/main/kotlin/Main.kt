@@ -1,5 +1,6 @@
 import kotlincode.chapter2.Person
 import kotlincode.chapter4.*
+import java.io.File
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -175,8 +176,25 @@ fun main(args: Array<String>) {
 //    cset.addAll(listOf(1, 1, 2))
 //    println("${cset.objectsAdded} were added, ${cset.size} objects remain")
 
-    Payroll.allEmployees.add(Person("Bob", true))
-    println(Payroll.allEmployees.size)
+//    Payroll.allEmployees.add(Person("Bob", true))
+//    println(Payroll.allEmployees.size)
+//    val file1 = File("/User")
+//    val file2 = File("/user")
+//    println(CaseInsensitiveFileComparator.compare(file1, file2))
+//    val files = listOf(File("/Z"), File("/a"))
+//    println(files.sortedWith(CaseInsensitiveFileComparator))
+//    val bob = Person2("Bob")
+//    val alice= Person2("Alice")
+//    println(listOf(bob, alice).sortedWith(Person2.NameComparator))
 
+    A.testCompanionObject()
+    /**
+     * Вы можете вызвать объект-компаньон через имя класса:
+     */
+//    val subscribingUser = User10.newSubscribingUser("bob@gmail.com")
+//    val facebookUser = User10.newFacebookUser(6366)
+//    println(subscribingUser.nickname)
+//    println(facebookUser.nickname)
 
+    testNamedCompanionObject()
 }

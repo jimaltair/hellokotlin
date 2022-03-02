@@ -14,11 +14,11 @@ class SubscribingUser(val email: String) : User6 {
         get() = email.substringBefore('@')      // собственный метод чтения
 }
 
-class FacebookUser(val accountld: Int) : User6 {
-    override val nickname = getFacebookName(accountld)      // инициализация свойства
+class FacebookUser(val accountId: Int) : User6 {
+    override val nickname = getFacebookName(accountId)      // инициализация свойства
 
-    fun getFacebookName(accountld: Int): String {
-        return "facebook$accountld"
+    fun getFacebookName(accountId: Int): String {
+        return "facebook$accountId"
     }
 }
 

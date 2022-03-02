@@ -1,6 +1,7 @@
 package kotlincode.chapter4
 
 import kotlincode.chapter2.Person
+import java.io.File
 
 /**
  * Ключевое слово "object" используется в языке Kotlin в разных случаях, которые объединены общей идеей:
@@ -25,3 +26,22 @@ object Payroll {
  * По аналогии с классом объявление объекта может содержать определения свойств, методов, блоков инициализации и т. д.
  * Единственное, что не допускается - конструкторы, основные или вторичные.
  */
+
+/**
+ * Реализация интерфейса Comparator с помощью объявления объекта
+ */
+object CaseInsensitiveFileComparator : Comparator<File> {
+    override fun compare(file1: File, file2: File): Int {
+        return file1.path.compareTo(file2.path, ignoreCase = true)
+    }
+}
+
+/**
+ * Реализация интерфейса Comparator как вложенного объекта
+ */
+data class Person2(val name: String) {
+    object NameComparator : Comparator<Person2> {
+        override fun compare(person1: Person2, person2: Person2) =
+            person1.name.compareTo(person2.name)
+    }
+}
