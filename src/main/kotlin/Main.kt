@@ -231,5 +231,7 @@ fun main(args: Array<String>) {
 //    allAnyCountFind()
 //    groubBy()
 //    flatMapAndFlatten()
-    delayedOperations()
+//    delayedOperations()
+//    sequenceCreation()
+    testIsInsideHiddenDirectory()
 }
