@@ -1,8 +1,4 @@
-import kotlincode.chapter2.Person
-import kotlincode.chapter4.*
 import kotlincode.chapter5.*
-import java.io.File
-import java.util.function.Consumer
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -216,4 +212,18 @@ fun main(args: Array<String>) {
 //    testLambda()
 //    anotherLambda()
 
+//    val errors = listOf("403 Forbidden", "404 Not found")
+//    printMessagesWithPrefix(errors, "Error:")
+//    val responses = listOf("200 OK", "418 I'm a teapot", "500 Internal Server Error")
+//    printProblemCounts(responses)
+//    someFun()
+//    nextAction(Person("Bob", 31), "Hello!")
+//    println(p)
+
+//    val dmitry = Person("Dmitry", 34)
+//    println(dmitry.isAdult())
+//    val persons = listOf(dmitry, Person("Alice", 15), Person("Bob", 31))
+//    persons.filter(adultPredicate).forEach(::println)
+
+    testConnectedReferences()
 }
