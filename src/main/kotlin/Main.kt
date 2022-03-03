@@ -225,5 +225,11 @@ fun main(args: Array<String>) {
 //    val persons = listOf(dmitry, Person("Alice", 15), Person("Bob", 31))
 //    persons.filter(adultPredicate).forEach(::println)
 
-    testConnectedReferences()
+//    testConnectedReferences()
+
+//    filterAndMap()
+//    allAnyCountFind()
+//    groubBy()
+//    flatMapAndFlatten()
+    delayedOperations()
 }
