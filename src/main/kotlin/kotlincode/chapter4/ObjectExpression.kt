@@ -12,18 +12,19 @@ import java.awt.event.MouseEvent
 /**
  * Реализация обработчика событий с помощью анонимного объекта
  */
-/*
-window.addMouseListener(
-    object : MouseAdapter() {                           // Объявление анонимного объекта, наследующего MouseAdapter
-        override fun mouseClicked(e: MouseEvent) {      // Переопределение методов MouseAdapter
-            // ...
-        }
+fun eventHandler(window: Window) {
+    window.addMouseListener(
+        object : MouseAdapter() {                           // Объявление анонимного объекта, наследующего MouseAdapter
+            override fun mouseClicked(e: MouseEvent?) {     // Переопределение методов MouseAdapter
+                // ...
+            }
 
-    override fun mouseEntered(e: MouseEvent) {          // Переопределение методов MouseAdapter
-        // ...
+            override fun mouseEntered(e: MouseEvent?) {     // Переопределение методов MouseAdapter
+                // ...
+            }
         }
-    }
-)*/
+    )
+}
 
 /**
  * Объект-выражение объявляет класс и создает экземпляр этого класса, но не присваивает имени ни классу, ни экземпляру.
@@ -31,9 +32,13 @@ window.addMouseListener(
  * Если объекту потребуется дать имя, его можно сохранить в переменной:
  */
 val listener = object : MouseAdapter() {
-    override fun mouseClicked(e: MouseEvent) {/*...*/}
-    override fun mouseEntered(e: MouseEvent) {/*...*/}
+    override fun mouseClicked(e: MouseEvent) {/*...*/
+    }
+
+    override fun mouseEntered(e: MouseEvent) {/*...*/
+    }
 }
+
 /**
  * В отличие от анонимных внутренних классов Java, которые могут наследовать только один класс или реализовать только
  * один интерфейс, анонимный объект Kotlin может реализовывать несколько интерфейсов или вовсе ни одного.
@@ -45,12 +50,12 @@ val listener = object : MouseAdapter() {
 /**
  * Доступ к локальным переменным из анонимного объекта
  */
-fun countClicks(window: Window){
-    var clickCount = 0                  // Объявление локальной переменной
+fun countClicks(window: Window) {
+    var clickCount = 0                                  // Объявление локальной переменной
 
-    window.addMouseListener(object : MouseAdapter(){
+    window.addMouseListener(object : MouseAdapter() {
         override fun mouseClicked(e: MouseEvent) {
-            clickCount++                // Изменение значения переменной
+            clickCount++                                // Изменение значения переменной
         }
     })
 }

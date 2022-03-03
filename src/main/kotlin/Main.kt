@@ -1,6 +1,8 @@
 import kotlincode.chapter2.Person
 import kotlincode.chapter4.*
+import kotlincode.chapter5.*
 import java.io.File
+import java.util.function.Consumer
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -187,7 +189,7 @@ fun main(args: Array<String>) {
 //    val alice= Person2("Alice")
 //    println(listOf(bob, alice).sortedWith(Person2.NameComparator))
 
-    A.testCompanionObject()
+//    A.testCompanionObject()
     /**
      * Вы можете вызвать объект-компаньон через имя класса:
      */
@@ -201,4 +203,17 @@ fun main(args: Array<String>) {
     /**
      * Глава 5
      */
+//    val people = listOf(Person("Bob", 31), Person("Alice", 29))
+//    findTheOldest(people)
+
+    /**
+     * тоже самое, с помощью лямбды
+     */
+//    println(people.maxByOrNull { it.age })
+//    println(people.maxByOrNull { p -> p.age })
+//    println(people.maxByOrNull(kotlincode.chapter5.Person::age))
+
+//    testLambda()
+//    anotherLambda()
+
 }
