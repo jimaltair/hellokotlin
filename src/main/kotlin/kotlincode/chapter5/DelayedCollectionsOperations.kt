@@ -62,7 +62,7 @@ fun sequenceCreation(){
 fun File.isInsideHiddenDirectory() =
     generateSequence(this) { it.parentFile }.any { it.isHidden }
 
-val file = File("/Users/svtk/.HiddenOir/a.txt")
+val file = File("/Users/svtk/.HiddenDir/a.txt")
 fun testIsInsideHiddenDirectory(){
     println(file.isInsideHiddenDirectory())
 }

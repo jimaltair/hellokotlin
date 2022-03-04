@@ -233,5 +233,14 @@ fun main(args: Array<String>) {
 //    flatMapAndFlatten()
 //    delayedOperations()
 //    sequenceCreation()
-    testIsInsideHiddenDirectory()
+//    testIsInsideHiddenDirectory()
+
+//    createAllDoneRunnable().run()
+
+//    println(alphabet())
+//    println(alphabet1())
+//    println(alphabet2())
+//    println(alphabet3())
+//    println(alphabet4())
+
 }
