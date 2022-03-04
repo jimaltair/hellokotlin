@@ -1,4 +1,7 @@
 import kotlincode.chapter5.*
+import kotlincode.chapter6.strLen
+import kotlincode.chapter6.strLenSafe
+import kotlincode.chapter6.strLenSafe1
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -242,5 +245,13 @@ fun main(args: Array<String>) {
 //    println(alphabet2())
 //    println(alphabet3())
 //    println(alphabet4())
-
+    /**
+     * Глава 6
+     */
+//    strLen(null)          // ошибка компиляции
+//    strLenSafe(null)        // а так можно
+//    val x: String? = null
+//    strLen(x)               // ошибка компиляции
+//    println(strLenSafe1(x))
+//    println(strLenSafe1("abc"))
 }
