@@ -278,9 +278,12 @@ fun main(args: Array<String>) {
 //    ignoreNulls("abc")
 //    ignoreNulls(null)       // получаем NPE
 
-    var email: String? = "yole@example.com"
-    email?.let { sendEmailTo(it) }
-    email = null
-    email?.let { sendEmailTo(it) }      // здесь ничего не произойдёт
+//    var email: String? = "yole@example.com"
+//    email?.let { sendEmailTo(it) }
+//    email = null
+//    email?.let { sendEmailTo(it) }      // здесь ничего не произойдёт
 
+//    testVerifyUserInput()
+
+//    testHashCode()
 }
