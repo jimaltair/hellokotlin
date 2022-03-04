@@ -1,5 +1,9 @@
 package kotlincode.chapter6
 
+import java.awt.event.ActionEvent
+import javax.swing.AbstractAction
+import javax.swing.JList
+
 /**
  * Случай, если мы не предполагаем что функция может быть вызвана со значением null
  */
@@ -77,9 +81,73 @@ fun Person.countryName1() = company?.address?.country ?: "Unknown"
  * действуют как выражения и, следовательно, могут находиться справа от оператора.
  */
 fun printShippingLabel(person: Person) {
-    val address = person.company?.address ?: throw IllegalArgumentException("No address")   // при отсутствии адреса вызовется исключение
-    with(address){                          // переменная "address" хранит непустое значение
+    val address = person.company?.address
+        ?: throw IllegalArgumentException("No address")   // при отсутствии адреса вызовется исключение
+    with(address) {                          // переменная "address" хранит непустое значение
         println(streetAddress)
         println("$zipCode, $city, $country")
     }
 }
+
+/**
+ * Безопасное приведение типов: оператор «as?»
+ * Оператор безопасного приведения пытается привести значение к заданному типу и возвращает null,
+ * если фактический тип отличается от ожидаемого.
+ *
+ * foo as? Type ---> foo is Type ---> foo as Type
+ *              \
+ *               --> foo !is Type ---> null
+ */
+
+/**
+ * Использование оператора безопасного приведения для реализации метода equals
+ */
+class Person1(val firstName: String, val lastName: String) {
+    override fun equals(other: Any?): Boolean {
+        val otherPerson =
+            other as? Person1 ?: return false  // проверит тип и вернёт false, если указанный тип недопустим
+        return otherPerson.firstName == firstName   // После безопасного приведения типа переменная otherPerson преобразуется к типу Person1
+                && otherPerson.lastName == lastName
+    }
+
+    override fun hashCode() = firstName.hashCode() * 37 + lastName.hashCode()
+}
+
+/**
+ * Проверка на null: утверждение «!!»
+ * Данное утверждение - самый простой и незатейливый способ, который Kotlin предоставляет для работы со значением null.
+ * Оно записывается как двойной восклицательный знак и преобразует любое значение к типу, не поддерживающему
+ * значения null. Если значение равно null, во время выполнения возникнет исключение.
+ *
+ * foo!! ---> foo != null ---> foo
+ *       \
+ *        --> foo == null ---> NPE
+ */
+
+/**
+ * Использование утверждения о невозможности значения null
+ */
+fun ignoreNulls(string: String?) {
+    val stringIsNotNull: String = string!!      // исключение указывает на эту строку
+    println(stringIsNotNull.length)
+}
+
+/**
+ * Использование утверждения !! в обработчике Swing
+ */
+class CopyRowAction(val list: JList<String>): AbstractAction(){
+    override fun isEnabled(): Boolean {
+        return list.selectedValue != null
+    }
+
+    override fun actionPerformed(e: ActionEvent) {      // Метод actionPerformed будет вызван, только если isEnabled вернет «true»
+        val value = list.selectedValue!!
+        // copy value to clipboard
+    }
+}
+
+/**
+ * Если вы получите исключение в этой строке, то не сможете сказать, какое поле получило значение null:
+ * company или address.
+ */
+//person.company!!.address!!.country     <---     He пишите такого кода!

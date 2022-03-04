@@ -269,4 +269,18 @@ fun main(args: Array<String>) {
 //    val person = Person("Dmitry", jetbrains)
 //    printShippingLabel(person)
 //    printShippingLabel(Person("Alexey", null))
+
+//    val p1 = Person1("Dmitry", "Demerov")
+//    val p2 = Person1("Dmitry", "Demerov")
+//    println(p1 == p2)           // оператор == вызывает метод equals
+//    println(p1.equals(42))
+
+//    ignoreNulls("abc")
+//    ignoreNulls(null)       // получаем NPE
+
+    var email: String? = "yole@example.com"
+    email?.let { sendEmailTo(it) }
+    email = null
+    email?.let { sendEmailTo(it) }      // здесь ничего не произойдёт
+
 }
