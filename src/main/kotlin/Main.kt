@@ -1,7 +1,5 @@
-import kotlincode.chapter5.*
-import kotlincode.chapter6.strLen
-import kotlincode.chapter6.strLenSafe
-import kotlincode.chapter6.strLenSafe1
+import kotlincode.chapter6.*
+import kotlincode.chapter6.Person
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -254,4 +252,21 @@ fun main(args: Array<String>) {
 //    strLen(x)               // ошибка компиляции
 //    println(strLenSafe1(x))
 //    println(strLenSafe1("abc"))
+
+//    printAllCaps("abc")
+//    printAllCaps(null)
+
+//    val ceo = Employee("Da Boss", null)
+//    val developer = Employee("Bob Smith", ceo)
+//    println(managerName(ceo))
+//    println(managerName(developer))
+
+//    println(strLenSafe2("abc"))
+//    println(strLenSafe2(null))
+
+//    val address = Address("Elsestr. 47", 80687, "Munich", "Germany")
+//    val jetbrains = Company("DetBrains", address)
+//    val person = Person("Dmitry", jetbrains)
+//    printShippingLabel(person)
+//    printShippingLabel(Person("Alexey", null))
 }
