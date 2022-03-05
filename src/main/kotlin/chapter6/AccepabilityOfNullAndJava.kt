@@ -1,6 +1,7 @@
 package chapter6
 
 import javacode.JavaPerson
+import javacode.StringProcessor
 
 /**
  * Код на Java может содержать информацию о допустимости значений null, выраженную с помощью аннотаций. Если эта
@@ -42,11 +43,38 @@ fun testYellAt() {
 /**
  * Обращение к классу Java с проверками на null
  */
-fun yellAtSafe(person: JavaPerson){
+fun yellAtSafe(person: JavaPerson) {
     println((person.name ?: "Anyone").uppercase() + "!!!")
 }
 
-fun testYellAtSafe(){
+fun testYellAtSafe() {
     yellAtSafe(JavaPerson("Bob"))
     yellAtSafe(JavaPerson(null))
+}
+
+/**
+ * Вы не можете объявить переменную платформенного типа в Kotlin - эти типы могут прийти только из кода на Java.
+ * Но вы можете встретить их в сообщениях об ошибках или в IDE:
+ *
+ * >>> val i: Int = person.name
+ * ERROR: Type mismatch: inferred type is String! but Int was expected
+ *
+ * С помощью нотации String! компилятор Kotlin обозначает платформенные типы, пришедшие из кода на Java.
+ */
+
+/**
+ * Наследование.
+ * Реализация Java-интерфейса с поддержкой и без поддержки null
+ */
+class StringPrinter : StringProcessor {
+    override fun process(value: String) {
+        println(value)
+    }
+}
+
+class NullableStringPrinter : StringProcessor {
+    override fun process(value: String?) {
+        if (value != null)
+            println(value)
+    }
 }
