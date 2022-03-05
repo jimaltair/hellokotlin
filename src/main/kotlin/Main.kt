@@ -1,5 +1,4 @@
-import chapter6.testYellAt
-import chapter6.testYellAtSafe
+import chapter6.*
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -289,4 +288,9 @@ fun main(args: Array<String>) {
 
 //    testYellAt()
 //    testYellAtSafe()
+
+//    println(Person7("Sam", 35).isOlderThan(Person7("Amy", 42)))
+//    println(Person7("Sam", 35).isOlderThan(Person7("Dane")))
+//    testTypeConversion()
+    testPrintLong()
 }
