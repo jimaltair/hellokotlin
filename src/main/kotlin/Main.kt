@@ -1,5 +1,5 @@
-import kotlincode.chapter6.*
-import kotlincode.chapter6.Person
+import chapter6.testYellAt
+import chapter6.testYellAtSafe
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -286,4 +286,7 @@ fun main(args: Array<String>) {
 //    testVerifyUserInput()
 
 //    testHashCode()
+
+//    testYellAt()
+//    testYellAtSafe()
 }
