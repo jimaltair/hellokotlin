@@ -301,5 +301,14 @@ fun main(args: Array<String>) {
 //    testAddValidNumbers()
 
 //    testCopyElements()
-    testCopyElements()
+//    testCopyElements()
+
+//    fakeMain(arrayOf("a", "abc", "npf"))
+//    println(letters.joinToString(""))
+//    testArrayCreation()
+//    println(fiveZeros.joinToString())
+//    println(fiveZerosToo.joinToString())
+//    println(squares.joinToString())
+
+    fakeMain1(arrayOf("a", "b", "c"))
 }
