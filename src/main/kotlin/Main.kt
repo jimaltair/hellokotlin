@@ -297,4 +297,9 @@ fun main(args: Array<String>) {
 //    fail("Error occurred")
 //    testNothing()
 
+//    testAddValidNumbers()
+//    testAddValidNumbers()
+
+//    testCopyElements()
+    testCopyElements()
 }
