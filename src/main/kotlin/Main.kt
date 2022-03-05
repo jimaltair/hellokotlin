@@ -292,5 +292,9 @@ fun main(args: Array<String>) {
 //    println(Person7("Sam", 35).isOlderThan(Person7("Amy", 42)))
 //    println(Person7("Sam", 35).isOlderThan(Person7("Dane")))
 //    testTypeConversion()
-    testPrintLong()
+//    testPrintLong()
+
+//    fail("Error occurred")
+//    testNothing()
+
 }
