@@ -1,4 +1,7 @@
+import chapter3.counter
 import chapter6.*
+import diffs.testCustomForLoop
+import java.time.LocalDate
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -310,5 +313,7 @@ fun main(args: Array<String>) {
 //    println(fiveZerosToo.joinToString())
 //    println(squares.joinToString())
 
-    fakeMain1(arrayOf("a", "b", "c"))
+//    fakeMain1(arrayOf("a", "b", "c"))
+
+    testCustomForLoop()
 }
