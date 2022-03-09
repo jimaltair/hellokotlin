@@ -1,6 +1,7 @@
 import chapter3.counter
 import chapter6.*
 import diffs.testCustomForLoop
+import diffs.testOperatorOverloading
 import java.time.LocalDate
 
 /**
@@ -315,5 +316,7 @@ fun main(args: Array<String>) {
 
 //    fakeMain1(arrayOf("a", "b", "c"))
 
-    testCustomForLoop()
+//    testCustomForLoop()
+
+//    testOperatorOverloading()
 }
