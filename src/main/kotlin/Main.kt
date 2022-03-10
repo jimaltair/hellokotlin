@@ -327,6 +327,12 @@ fun main(args: Array<String>) {
 //    testCompositeOperators()
 //    testMutableCollectionCompositeOperator()
 //    testUnaryMinusOperator()
-    testBigDecimalIncrement()
+//    testBigDecimalIncrement()
+//    testPointEquals()
 
+//    testPersonCompare()
+
+//    testMapElementInvocation()
+//    testPointGetMethod()
+    testPointSetMethod()
 }

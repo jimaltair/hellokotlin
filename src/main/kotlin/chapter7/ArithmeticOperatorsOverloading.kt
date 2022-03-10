@@ -71,7 +71,7 @@ fun testCharTimes() {
  * Обычно, когда определяется оператор plus, Kotlin начинает поддерживать не только операцию +, но и +=. Операторы +=,
  * -= и другие называют составными операторами присваивания. Например:
  */
-fun testCompositeOperators(){
+fun testCompositeOperators() {
     var point = Point(1, 2)
     point += Point(3, 4)
     println(point)
@@ -82,7 +82,7 @@ fun testCompositeOperators(){
  * переменная, участвующая в операции, а не менять переменную так, чтобы она ссылалась на другой объект. Один из таких
  * случаев - добавление нового элемента в изменяемую коллекцию:
  */
-fun testMutableCollectionCompositeOperator(){
+fun testMutableCollectionCompositeOperator() {
     var numbers = arrayListOf(1, 2, 4)
     numbers += 42       // в коллекцию добавится новый элемент
     println(numbers)
@@ -104,11 +104,11 @@ fun testMutableCollectionCompositeOperator(){
  * (член или расширение) с предопределенным именем, которая затем отмечается модификатором operator.
  * Рассмотрим это на примере.
  */
-operator fun Point.unaryMinus(): Point{     // функция, реализующая унарный минус, не имеет параметров
+operator fun Point.unaryMinus(): Point {     // функция, реализующая унарный минус, не имеет параметров
     return Point(-x, -y)        // меняет знак координат точки и возвращает их
 }
 
-fun testUnaryMinusOperator(){
+fun testUnaryMinusOperator() {
     val point = Point(10, 20)
     println(-point)
 }
@@ -131,7 +131,7 @@ fun testUnaryMinusOperator(){
  */
 operator fun BigDecimal.inc() = this + BigDecimal.ONE
 
-fun testBigDecimalIncrement(){
+fun testBigDecimalIncrement() {
     var bigDecimal = BigDecimal(10)
     println(++bigDecimal)
 }
