@@ -1,5 +1,6 @@
 import chapter3.counter
 import chapter6.*
+import chapter7.*
 import diffs.testCustomForLoop
 import diffs.testOperatorOverloading
 import java.time.LocalDate
@@ -319,4 +320,13 @@ fun main(args: Array<String>) {
 //    testCustomForLoop()
 
 //    testOperatorOverloading()
+
+//    testPointPlusOperator()
+//    estPointTimesOperator()
+//    testCharTimes()
+//    testCompositeOperators()
+//    testMutableCollectionCompositeOperator()
+//    testUnaryMinusOperator()
+    testBigDecimalIncrement()
+
 }
