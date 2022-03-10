@@ -334,5 +334,14 @@ fun main(args: Array<String>) {
 
 //    testMapElementInvocation()
 //    testPointGetMethod()
-    testPointSetMethod()
+//    testPointSetMethod()
+
+//    testRectangleContains()
+//    testStandartRangeTo()
+//    testDateIterator()
+
+//    testDestructuringDeclaration()
+    testSplitFilename()
+
+
 }
