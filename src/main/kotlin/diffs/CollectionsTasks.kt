@@ -42,3 +42,16 @@ fun Customer.getMostExpensiveOrderedProduct(): Product? = orders.flatMap(Order::
 
 // Return a list of customers, sorted by the ascending number of orders they made
 fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer> = customers.sortedBy { it.orders.size }
+
+// Return the sum of prices of all products that a customer has ordered.
+// Note: the customer may order the same product for several times.
+fun Customer.getTotalOrderPrice(): Double = orders.flatMap { it.products }.sumOf { it.price }
+
+// Return a map of the customers living in each city
+fun Shop.groupCustomersByCity(): Map<City, List<Customer>> = customers.groupBy { it.city }
+
+// Return customers who have more undelivered orders than delivered
+fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> = customers.filter {
+    val (delivered, undelivered) = it.orders.partition { it.isDelivered }
+    undelivered.size > delivered.size
+}.toSet()
