@@ -53,3 +53,17 @@ fun testSplitFilename() {
     println("1st variant /// Name: $name, extension: $extension")
     println("2nd variant /// Name: $name1, extension: $extension1")
 }
+
+/**
+ * Использование мультидекларации для обхода элементов словаря
+ */
+fun printEntries(map: Map<String, String>) {
+    for ((key, value) in map) {         // Мультидекларация в объявлении цикла
+        println("$key = $value")
+    }
+}
+
+fun testPrintEntries(){
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    printEntries(map)
+}

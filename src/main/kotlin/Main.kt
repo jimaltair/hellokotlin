@@ -1,9 +1,4 @@
-import chapter3.counter
-import chapter6.*
 import chapter7.*
-import diffs.testCustomForLoop
-import diffs.testOperatorOverloading
-import java.time.LocalDate
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -341,7 +336,13 @@ fun main(args: Array<String>) {
 //    testDateIterator()
 
 //    testDestructuringDeclaration()
-    testSplitFilename()
+//    testSplitFilename()
+//    testPrintEntries()
 
+//    testPropertiesDelegation()
+//    testLazyInitializationForPerson1()
+//    testLazyInitializationForPerson2()
+
+//    testPerson3Atributes()
 
 }
