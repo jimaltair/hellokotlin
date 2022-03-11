@@ -34,9 +34,14 @@ public Collection<String> doSomethingStrangeWithCollection(Collection<String> co
  */
 fun doSomethingStrangeWithCollection(collection: Collection<String>): Collection<String>? {
 
-    val groupsByLength = collection. groupBy { s -> TODO() }
+    val groupsByLength = collection.groupBy(String::length)
 
-    val maximumSizeOfGroup = groupsByLength.values.map { group -> TODO() }.max()
+    val maximumSizeOfGroup = groupsByLength
+        .values
+        .map { group -> group.size }
+        .maxByOrNull { it }
 
-    return groupsByLength.values.firstOrNull { group -> TODO() }
+    return groupsByLength
+        .values
+        .firstOrNull { group -> group.size == maximumSizeOfGroup }
 }

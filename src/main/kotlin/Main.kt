@@ -1,4 +1,5 @@
-import chapter7.*
+import stepictasks.doSomethingStrangeWithCollection
+import java.util.List
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -344,6 +345,11 @@ fun main(args: Array<String>) {
 //    testLazyInitializationForPerson2()
 
 //    testPerson3Atributes()
-
+    /**
+     * Task 3.12
+     */
+//    var strings = listOf("a", "ab", "ccc", "abc", "zzz", "cd", "efk", "a")
+//    val result = doSomethingStrangeWithCollection(strings)
+//    println(result)
 
 }

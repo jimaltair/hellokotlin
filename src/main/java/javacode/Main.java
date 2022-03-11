@@ -6,6 +6,7 @@ import chapter3.PropertiesAdditionToOutsideClassesKt;
 import chapter3.StringFunctions;
 
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,8 +17,6 @@ public class Main {
          */
         Person person = new Person("Bob", true);
         System.out.println(person);
-
-        var map = new HashMap<>();
 
         Rectangle rectangle = new Rectangle(41, 43);
         System.out.println(rectangle.isSquare());
@@ -36,5 +35,9 @@ public class Main {
          * чтобы обратиться к свойству-расширению из Java, нужно явно вызывать его метод чтения:
          */
         PropertiesAdditionToOutsideClassesKt.getLastChar("Java");
+
+        var strings = List.of("a", "ab", "ccc", "abc", "zzz", "cd", "efk", "a");
+        Collection<String> result = StepicTask_3_12.doSomethingStrangeWithCollection(strings);
+        System.out.println(result.toString());
     }
 }
