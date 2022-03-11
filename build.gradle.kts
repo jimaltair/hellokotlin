@@ -18,7 +18,7 @@ dependencies {
     testImplementation(kotlin("test"))
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit5
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.6.10")
-
+    implementation("com.google.guava:guava:30.1.1-jre")
 }
 
 tasks.test {

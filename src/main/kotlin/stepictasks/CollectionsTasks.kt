@@ -1,4 +1,4 @@
-package diffs
+package stepictasks
 
 data class Product(val name: String, val price: Double)
 
@@ -9,6 +9,7 @@ data class Order(val products: List<Product>, val isDelivered: Boolean)
 data class Customer(val name: String, val city: City, val orders: List<Order>)
 
 data class City(val name: String)
+
 
 // Return the set of cities the customers are from
 fun Shop.getCitiesCustomersAreFrom(): Set<City> = customers.map { it.city }.toSet()
@@ -55,3 +56,29 @@ fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> = c
     val (delivered, undelivered) = it.orders.partition { it.isDelivered }
     undelivered.size > delivered.size
 }.toSet()
+
+// Return the set of products that were ordered by every customer
+fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product> =
+    customers
+        .map { it.orders.flatMap(Order::products).toSet() }
+        .reduce { result, products -> result.intersect(products) }
+
+// Return the most expensive product among all delivered products
+// (use the Order.isDelivered flag)
+fun Customer.getMostExpensiveDeliveredProduct(): Product? =
+    orders
+        .filter(Order::isDelivered)
+        .flatMap { it.products }
+        .maxByOrNull { it.price }
+
+// Return how many times the given product was ordered.
+// Note: a customer may order the same product for several times.
+fun Shop.getNumberOfTimesProductWasOrdered(product: Product) =
+    customers
+        .flatMap { it.orders }
+        .flatMap { it.products }
+        .map { it.name }
+        .count { it == product.name }
+
+
+

@@ -6,6 +6,7 @@ import chapter3.PropertiesAdditionToOutsideClassesKt;
 import chapter3.StringFunctions;
 
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Main {
@@ -15,6 +16,8 @@ public class Main {
          */
         Person person = new Person("Bob", true);
         System.out.println(person);
+
+        var map = new HashMap<>();
 
         Rectangle rectangle = new Rectangle(41, 43);
         System.out.println(rectangle.isSquare());

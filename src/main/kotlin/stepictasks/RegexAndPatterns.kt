@@ -1,4 +1,4 @@
-package diffs
+package stepictasks
 
 import java.util.regex.Pattern
 

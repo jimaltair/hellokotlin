@@ -1,6 +1,6 @@
-package diffs
+package stepictasks
 
-import diffs.TimeInterval.*
+import stepictasks.TimeInterval.*
 import java.time.LocalDate
 import java.util.*
 
