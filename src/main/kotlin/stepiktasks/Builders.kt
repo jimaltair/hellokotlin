@@ -37,7 +37,10 @@ fun <K, V> buildMap1(build: MutableMap<K, V>.() -> Unit): Map<K, V> = HashMap<K,
  * The previous examples can be rewritten using the library function apply (see examples below).
  * Write your own implementation of this function named 'myApply'.
  */
-fun <T> T.myApply(f: T.() -> Unit): T { TODO() }
+fun <T> T.myApply(f: T.() -> Unit): T {
+    f()
+    return this
+}
 
 fun createString(): String {
     return StringBuilder().myApply {

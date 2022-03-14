@@ -1,3 +1,5 @@
+import stepiktasks.testBubbleSort
+
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
  */
@@ -348,5 +350,7 @@ fun main(args: Array<String>) {
 //    var strings = listOf("a", "ab", "ccc", "abc", "zzz", "cd", "efk", "a")
 //    val result = doSomethingStrangeWithCollection(strings)
 //    println(result)
+
+    testBubbleSort()
 
 }
