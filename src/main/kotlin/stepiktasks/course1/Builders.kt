@@ -31,7 +31,7 @@ fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): HashMap<K, V> {
     return hashMap
 }
 
-fun <K, V> buildMap1(build: MutableMap<K, V>.() -> Unit): Map<K, V> = HashMap<K, V>().apply { build() }
+fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): Map<K, V> = HashMap<K, V>().apply { build() }
 
 /**
  * The previous examples can be rewritten using the library function apply (see examples below).

@@ -1,4 +1,6 @@
+import javacode.StepicTask_3_12.doSomethingStrangeWithCollection
 import stepiktasks.testBubbleSort
+import stepiktasks.testPascalTriangle
 
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
@@ -350,7 +352,9 @@ fun main(args: Array<String>) {
 //    var strings = listOf("a", "ab", "ccc", "abc", "zzz", "cd", "efk", "a")
 //    val result = doSomethingStrangeWithCollection(strings)
 //    println(result)
+//
+//    testBubbleSort()
 
-    testBubbleSort()
+    testPascalTriangle()
 
 }
