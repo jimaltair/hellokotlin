@@ -1,4 +1,4 @@
-package stepictasks
+package stepiktasks
 
 /**
  * Rewrite the following Java function to Kotlin.

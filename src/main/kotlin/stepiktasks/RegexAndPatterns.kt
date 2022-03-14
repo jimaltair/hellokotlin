@@ -1,4 +1,4 @@
-package stepictasks
+package stepiktasks
 
 import java.util.regex.Pattern
 

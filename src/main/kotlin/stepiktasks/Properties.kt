@@ -1,4 +1,4 @@
-package stepictasks
+package stepiktasks
 
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
@@ -53,17 +53,22 @@ class EffectiveDate<R> : ReadWriteProperty<R, MyDate> {
     var timeInMillis: Long? = null
 
     override fun getValue(thisRef: R, property: KProperty<*>): MyDate {
-        return MyDate().toMillis()
+        return timeInMillis!!.toDate()
     }
 
     override fun setValue(thisRef: R, property: KProperty<*>, value: MyDate) {
-
+        timeInMillis = value.toMillis()
     }
 }
 
-fun MyDate.toMillis() {
+/**
+ * Данные функции уже реализованы
+ */
 
+fun MyDate.toMillis(): Long {
+    return 1L
 }
-fun Long.toDate(){
 
+fun Long.toDate(): MyDate {
+    return MyDate(2022, 2, 11)
 }

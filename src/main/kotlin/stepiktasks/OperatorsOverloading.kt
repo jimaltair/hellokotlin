@@ -1,6 +1,6 @@
-package stepictasks
+package stepiktasks
 
-import stepictasks.TimeInterval.*
+import stepiktasks.TimeInterval.*
 import java.time.LocalDate
 import java.util.*
 

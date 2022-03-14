@@ -1,4 +1,4 @@
-package stepictasks
+package stepiktasks
 
 import java.util.*
 import kotlin.NoSuchElementException

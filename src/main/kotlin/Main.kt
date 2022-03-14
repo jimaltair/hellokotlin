@@ -1,6 +1,3 @@
-import stepictasks.doSomethingStrangeWithCollection
-import java.util.List
-
 /**
  * Можно поменять имя импортируемого класса или функции, добавив ключевое слово as:
  */
