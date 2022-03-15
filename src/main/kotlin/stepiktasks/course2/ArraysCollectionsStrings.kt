@@ -1,6 +1,7 @@
 package stepiktasks.course2
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Необходимо разработать программу для поиска среднего и медианного значений списка действительных чисел со знаком,
@@ -43,7 +44,7 @@ import java.util.*
 /**
  * Вам надо написать функцию для удаления повторных регистраций от пользователей с одинаковыми именами.
  */
-fun deleteCopies(inputList: List<String>) : List<String> {
+fun deleteCopies(inputList: List<String>): List<String> {
     return inputList.distinct()
 }
 
@@ -75,7 +76,7 @@ fun deleteCopies(inputList: List<String>) : List<String> {
 //    }
 //}
 
-fun sortLists(inputList: List<String>) : MutableList<MutableList<String>> {
+fun sortLists(inputList: List<String>): MutableList<MutableList<String>> {
     return inputList
         .groupBy { it.first() }
         .values
@@ -95,6 +96,18 @@ fun sortLists(inputList: List<String>) : MutableList<MutableList<String>> {
  * Sample Output:
  * 0
  */
-fun findSubstrings(text: String, substring: String) : MutableList<Int> {
-    TODO()
+fun main(args: Array<String>) {
+    val input = readLine()
+    val text = input!!.split(" ").get(0)
+    val substring = input.split(" ").get(1)
+    println(findSubstrings(text, substring))
+}
+
+fun findSubstrings(text: String, substring: String): MutableList<Int> {
+    val result = ArrayList<Int>(0)
+    // TODO: находит только первое вхождение, а нужно все
+    if (text.contains(substring)) {
+        result.add(text.indexOf(substring))
+    }
+    return result
 }
