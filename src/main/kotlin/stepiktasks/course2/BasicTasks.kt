@@ -1,7 +1,7 @@
 package stepiktasks
 
-import java.util.Arrays
-import java.util.function.BiFunction
+import chapter3.joinToString
+import java.math.BigInteger
 
 /**
  * Реализовать сортировку пузырьком (или другим более увлекательным способом), дополнив функцию bubbleSort.
@@ -40,8 +40,7 @@ fun pascalTriangle(rows: Int) {
         var c = 1
         for (i in 1..line) {
             print("$c")
-            if (i != line)
-                print(".")
+            if (i != line) print(".")
             c = c * (line - i) / i
         }
         println()
@@ -78,41 +77,139 @@ fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false) =
     (if (toUpperCase) name.toUpperCase() else name) + number
 
 fun useFoo() = listOf(
-    foo("a"),
-    foo("b", number = 1),
-    foo("c", toUpperCase = true),
-    foo(name = "d", number = 2, toUpperCase = true)
+    foo("a"), foo("b", number = 1), foo("c", toUpperCase = true), foo(name = "d", number = 2, toUpperCase = true)
 )
 
 /**
  * Написать элементарную программу кодирования строки. Каждый символ кодируется своим обозначением и количеством
  * повторений. Например, для строки «aaaaaabbbbbaccccddeeeee» результатом кодирования будет строка «a6b5a1c4d2e5».
  */
-fun main(args: Array<String>) {
-    val str = readLine()!!
+//fun main(args: Array<String>) {
+//    val str = readLine()!!
+//    encodeStringJavaStyle(str)
+//    encodeStringKotlinStyle(str)
+//}
+
+fun encodeStringJavaStyle(str: String) {
     val sb = StringBuilder()
     var charCounter = 0
     var currentChar: Char? = null
     for ((index, char) in str.toCharArray().withIndex()) {
-        if (index < str.length - 1) {
-            if (currentChar == null) {
-                currentChar = char
-                charCounter++
-            } else if (char == currentChar) {
+        if (index == 0) {
+            currentChar = char
+            charCounter++
+        }
+        if (index in 1 until str.length - 1) {
+            if (char == currentChar) {
                 charCounter++
             } else {
                 sb.append(currentChar).append(charCounter)
                 currentChar = char
                 charCounter = 1
             }
-        } else {
+        }
+        if (index == str.length - 1) {
             if (char == currentChar) {
                 charCounter++
                 sb.append(char).append(charCounter)
             } else {
+                sb.append(currentChar).append(charCounter)
                 sb.append(char).append(1)
             }
         }
     }
-    println(sb)
+    println(sb.toString())
 }
+
+fun encodeStringKotlinStyle(str: String) {
+    var charCounter = 0
+    var currentChar = str.first()
+    for (char in str) {
+        if (char != currentChar) {
+            print("$currentChar$charCounter")
+            charCounter = 0
+        }
+        currentChar = char
+        charCounter++
+    }
+    print("$currentChar$charCounter")
+}
+
+/**
+ * Интеллектуальная среда разработки IntelliJ IDEA умеет конвертировать Java-код в Kotlin-код.
+ * Ваша задача состоит в том, чтобы конвертировать функцию toJSON в Kotlin-код:
+ */
+/*
+public class JavaCode {
+    public String toJSON(Collection<Integer> collection) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        Iterator<Integer> iterator = collection.iterator();
+        while (iterator.hasNext()) {
+            Integer element = iterator.next();
+            sb.append(element);
+            if (iterator.hasNext()) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+}
+ */
+class JavaCode {
+    fun toJSON(collection: Collection<Int?>): String {
+        val sb = StringBuilder()
+        sb.append("[")
+        val iterator = collection.iterator()
+        while (iterator.hasNext()) {
+            val element = iterator.next()
+            sb.append(element)
+            if (iterator.hasNext()) {
+                sb.append(", ")
+            }
+        }
+        sb.append("]")
+        collection.joinToString()
+        return sb.toString()
+    }
+}
+
+/**
+ * Даны 111 беззнаковых целых, каждое из которых состоит из 47 цифр (см. пример ниже).
+ * Необходимо вывести первые 9 цифр их суммы. В данной задаче не предполагает использование коллекций.
+ *
+ * Input:
+ * 13273269708705650734211312160963364392368945816
+ * 64361863847308796002886528604013323768035602644
+ * 60587804274606460837016609279605443939335348830
+ * ...
+ * 39921573434927647476246337094832271637540776910
+ *
+ * Output: 599603249
+ */
+//fun main(args: Array<String>) {
+//    var sum = BigInteger.ZERO
+//    while (true) {
+//        val str = readLine()
+//        if (str == "" || str == null)
+//            break
+//        sum += str.toBigInteger()
+//    }
+//    println(sum.toString().take(9))
+//}
+
+/**
+ * Реализовать функцию для перевода числа, заданного в двоичной системе счисления в шестнадцатеричную.
+ *
+ * Input:
+ * 101010111100
+ *
+ * Output:
+ * ABC
+ */
+//fun main(args: Array<String>) {
+//    val intNum = Integer.parseInt(readLine(), 2)
+//    val hexNum = Integer.toHexString(intNum)
+//    println(hexNum.uppercase())
+//}

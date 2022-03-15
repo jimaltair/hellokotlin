@@ -355,6 +355,6 @@ fun main(args: Array<String>) {
 //
 //    testBubbleSort()
 
-    testPascalTriangle()
+//    testPascalTriangle()
 
 }
