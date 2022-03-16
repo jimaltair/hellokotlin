@@ -98,12 +98,12 @@ fun sortLists(inputList: List<String>): MutableList<MutableList<String>> {
  * Sample Output:
  * 0
  */
-fun main(args: Array<String>) {
-    val input = readLine()
-    val text = input!!.split(" ").get(0)
-    val substring = input.split(" ").get(1)
-    println(findSubstrings(text, substring))
-}
+//fun main(args: Array<String>) {
+//    val input = readLine()
+//    val text = input!!.split(" ").get(0)
+//    val substring = input.split(" ").get(1)
+//    println(findSubstrings(text, substring))
+//}
 /*
 классический вариант, как в Java
 fun findSubstrings(text: String, substring: String): MutableList<Int> {
