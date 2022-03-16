@@ -1,10 +1,6 @@
 package stepiktasks.course2
 
-import java.time.Duration
-import kotlin.math.ceil
-import kotlin.math.floor
 import kotlin.math.round
-import kotlin.math.truncate
 
 
 /**
@@ -32,23 +28,17 @@ import kotlin.math.truncate
  * days: 1
  * hours: 0
  */
-//fun main(args: Array<String>) {
-//    val input = Integer.parseInt(readLine())
-//    val myDate = convertMinutesToDays(input)
-//    println("days: ${myDate.days.toInt()}")
-//    println("hours: ${myDate.hours.toInt()}")
-//}
+fun main(args: Array<String>) {
+    val input = Integer.parseInt(readLine())
+    val myDate = convertMinutesToDays(input)
+    println("days: ${myDate.first}")
+    println("hours: ${myDate.second}")
+}
 
-data class MyDate(val days: Double, val hours: Double)
-
-fun convertMinutesToDays(minutes: Int): MyDate {
+fun convertMinutesToDays(minutes: Int): Pair<Int, Int> {
     val hours = round(minutes / 60.0)
     val days = round(hours / 24.0)
-    if (hours < 24) {
-        return MyDate(0.0, hours)
-    } else {
-        return MyDate(days, 0.0)
-    }
+    return Pair(days.toInt(), hours.toInt() % 24)
 }
 
 /**
@@ -103,6 +93,5 @@ fun convertMinutesToDays(minutes: Int): MyDate {
  * Sample Output 3:
  * 0
  */
-fun main(args: Array<String>) {
-}
-fun Int.times(){}
+//fun main(args: Array<String>) {
+//}
