@@ -1,6 +1,8 @@
 package stepiktasks.course2
 
 import java.util.*
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 
 /**
@@ -91,7 +93,7 @@ fun sortLists(inputList: List<String>): MutableList<MutableList<String>> {
  * "абракадабрабракадабра" будет обозначено только одно вхождение, первое слева).
  *
  * Sample Input:
- * абракадабрабракадабра абракадабра
+ * абракадабрабракадабракадабраfffабракадабрадабрацоаттшабракцштабракадабра абракадабра
  *
  * Sample Output:
  * 0
@@ -102,12 +104,24 @@ fun main(args: Array<String>) {
     val substring = input.split(" ").get(1)
     println(findSubstrings(text, substring))
 }
-
+/*
+классический вариант, как в Java
 fun findSubstrings(text: String, substring: String): MutableList<Int> {
     val result = ArrayList<Int>(0)
-    // TODO: находит только первое вхождение, а нужно все
-    if (text.contains(substring)) {
-        result.add(text.indexOf(substring))
+    val pattern = Pattern.compile(substring)
+    val matcher = pattern.matcher(text)
+    while (matcher.find()) {
+        val index = matcher.start()
+        result.add(index)
     }
     return result
 }
+ */
+
+// в одну строку в Kotlin-стиле
+fun findSubstrings(text: String, substring: String): MutableList<Int> =
+    Regex(substring)
+        .findAll(text)
+        .map { it.range.start }
+        .toMutableList()
+
