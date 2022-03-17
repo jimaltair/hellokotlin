@@ -1,6 +1,6 @@
 package stepiktasks.course2
 
-import kotlin.math.round
+import kotlin.math.roundToInt
 
 
 /**
@@ -28,17 +28,17 @@ import kotlin.math.round
  * days: 1
  * hours: 0
  */
-fun main(args: Array<String>) {
-    val input = Integer.parseInt(readLine())
-    val myDate = convertMinutesToDays(input)
-    println("days: ${myDate.first}")
-    println("hours: ${myDate.second}")
-}
+//fun main(args: Array<String>) {
+//    val input = Integer.parseInt(readLine())
+//    val myDate = convertMinutesToDays(input)
+//    println("days: ${myDate.first}")
+//    println("hours: ${myDate.second}")
+//}
 
 fun convertMinutesToDays(minutes: Int): Pair<Int, Int> {
-    val hours = round(minutes / 60.0)
-    val days = round(hours / 24.0)
-    return Pair(days.toInt(), hours.toInt() % 24)
+    val hours = (minutes / 60.0).roundToInt()
+    val days = (hours / 24.0).roundToInt()
+    return Pair(days, hours % 24)
 }
 
 /**
