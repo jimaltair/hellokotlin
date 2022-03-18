@@ -1,4 +1,4 @@
-package corutines
+package coroutines
 
 import kotlinx.coroutines.*
 
@@ -10,11 +10,11 @@ import kotlinx.coroutines.*
  */
 var result: Double? = null
 
-suspend fun main() {
-//    firstExample()
-//    secondExample()
-    thirdExample()
-}
+//suspend fun main() {
+////    firstExample()
+////    secondExample()
+//    thirdExample()
+//}
 
 
 suspend fun firstExample() {

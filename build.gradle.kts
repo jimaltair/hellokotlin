@@ -18,7 +18,7 @@ dependencies {
     testImplementation(kotlin("test"))
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.6.10")
     implementation("com.google.guava:guava:30.1.1-jre")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 }
 
 tasks.test {
