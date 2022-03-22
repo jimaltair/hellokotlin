@@ -10,11 +10,12 @@ import kotlinx.coroutines.*
  */
 var result: Double? = null
 
-//suspend fun main() {
-////    firstExample()
-////    secondExample()
+suspend fun main() {
+//    firstExample()
+//    secondExample()
 //    thirdExample()
-//}
+    coroutineWithTimeout()
+}
 
 
 suspend fun firstExample() {
@@ -35,9 +36,10 @@ suspend fun secondExample() {
     }
 }
 
-suspend fun thirdExample(){
+suspend fun thirdExample() {
     coroutineScope {
-        val job = async { result = doWork1() }.invokeOnCompletion { println(result) }   // после завершения напечатает result
+        val job =
+            async { result = doWork1() }.invokeOnCompletion { println(result) }   // после завершения напечатает result
         async { doWork2() }
     }
 }
@@ -69,5 +71,14 @@ suspend fun doWork2() {
         delay(400L)
     }
     println("doWork2() is ended")
+}
+
+suspend fun coroutineWithTimeout() {
+    withTimeout(100L) {
+        repeat(500) { i ->
+            println("Спать $i ...")
+            delay(100L)
+        }
+    }
 }
 
