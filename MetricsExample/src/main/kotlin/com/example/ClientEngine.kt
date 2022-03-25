@@ -1,7 +1,8 @@
-package metrics
-
 import org.http4k.client.JavaHttpClient
-import org.http4k.core.*
+import org.http4k.core.Filter
+import org.http4k.core.Method
+import org.http4k.core.Request
+import org.http4k.core.Response
 import kotlin.random.Random
 
 /**
@@ -12,11 +13,7 @@ private const val CALLING_URI = "https://pokeapi.co/api/v2/pokemon"
 private const val DEFAULT_TIME_GENERATOR_UPPER_BOUND = 1000L
 private const val DEFAULT_DOWNLOADED_POKEMONS_UPPER_BOUND = 100
 
-fun main() {
-    testClientEngine()
-}
-
-private fun testClientEngine() {
+fun testClientEngine() {
     //    val http = Debug().then(JavaHttpClient())       // с выводом полученного ответа в консоль
     val client = JavaHttpClient()       // а здесь ничего не делаем
     while (true) {
@@ -25,7 +22,7 @@ private fun testClientEngine() {
         val response: Response = client(request)
         val body: String = response.bodyString()
         val status: String = response.status.toString()
-        println(status)
+        println("Response code: $status")
         // имитируем перерывы между запросами по сети
         Thread.sleep(getRandomTime())
     }
