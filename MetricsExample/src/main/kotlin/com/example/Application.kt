@@ -38,10 +38,6 @@ fun Application.module(testing: Boolean = false) {
         )
     }
     routing {
-        get("/") {
-            call.respondText("Hello, Kotlin!")
-        }
-
         get("/metrics") {
             call.respond(appMicrometerRegistry.scrape())
         }

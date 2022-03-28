@@ -22,7 +22,7 @@ fun testClientEngine() {
         val response: Response = client(request)
         val body: String = response.bodyString()
         val status: String = response.status.toString()
-        println("Response code: $status")
+        println("Response code: $status, body length: ${body.length}")
         // имитируем перерывы между запросами по сети
         Thread.sleep(getRandomTime())
     }
